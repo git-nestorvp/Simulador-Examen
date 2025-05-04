@@ -9,6 +9,16 @@ const bancoPreguntas = [
     opciones: ["Lenguaje de programación", "Lenguaje de marcado", "Framework", "Base de datos"],
     correcta: 1
   },
+  {
+    pregunta: "Se un OSS ha accidentalmente rovesciato una brocca d'acqua nel corridoio dell'unità operativa, per ridurre il rischio di cadute, qual è il primo intervento che si dovrebbe attuare?",
+    opciones: [
+      "Andare a prendere degli asciugamani o qualcos'altro per asciugare",
+      "Restare dov'è avvenuto l'incidente e mandare qualcun altro a chiamare il personale delle pulizie per fare asciugare",
+      "Riempire di nuovo la brocca d'acqua e portarla al paziente, quindi tornare ad asciugare",
+      "Chiamare il personale delle pulizie dalla postazione più vicina per asciugare"
+    ],
+    correcta: 1
+  }
   // Agrega más preguntas aquí...
 ];
 
