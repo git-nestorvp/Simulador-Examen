@@ -2,19 +2,70 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simulador de Preguntas</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+    }
+
+    #pregunta {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    #opciones button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background-color: white;
+    }
+
+    #opciones button.correcta {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+
+    #opciones button.incorrecta {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+
+    #siguiente, #reiniciar {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    #feedback {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    #contador {
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Simulador de Preguntas</h1>
-    <div id="pregunta"></div>
-    <div id="opciones"></div>
-    <div id="feedback"></div>
-    <button id="siguiente" disabled>Siguiente</button>
-    <div id="contador"></div>
-  </div>
+  <h1>📝 Simulador de Preguntas</h1>
+  <div id="contador"></div>
+  <div id="pregunta"></div>
+  <div id="opciones"></div>
+  <div id="feedback"></div>
+  <button id="siguiente" disabled>Siguiente</button>
+
+  <!-- Tu script al final -->
   <script src="script.js"></script>
 </body>
 </html>

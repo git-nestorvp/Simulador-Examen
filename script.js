@@ -33,7 +33,7 @@ const divFeedback = document.getElementById("feedback");
 const btnSiguiente = document.getElementById("siguiente");
 const divContador = document.getElementById("contador");
 
-// Creamos el botón de reinicio
+// Botón para reiniciar examen
 const btnReiniciar = document.createElement("button");
 btnReiniciar.textContent = "🔄 Volver a realizar examen";
 btnReiniciar.style.display = "none";
@@ -57,30 +57,42 @@ function mostrarPregunta() {
   divPregunta.textContent = preguntaActual.pregunta;
   divContador.textContent = `Pregunta ${indice + 1} de ${preguntasAleatorias.length}`;
 
-  preguntaActual.opciones.forEach((opcion, i) => {
+  // Mezclar opciones y mantener cuál es la correcta
+  const opcionesOriginales = [...preguntaActual.opciones];
+  const indiceCorrectoOriginal = preguntaActual.correcta;
+
+  const opcionesMezcladas = opcionesOriginales
+    .map((opcion, i) => ({ texto: opcion, esCorrecta: i === indiceCorrectoOriginal }))
+    .sort(() => 0.5 - Math.random());
+
+  opcionesMezcladas.forEach((opcionObj) => {
     const btn = document.createElement("button");
-    btn.textContent = opcion;
-    btn.onclick = () => evaluarRespuesta(btn, i);
+    btn.textContent = opcionObj.texto;
+    btn.onclick = () => evaluarRespuesta(btn, opcionObj.esCorrecta);
     divOpciones.appendChild(btn);
   });
 }
 
-function evaluarRespuesta(btn, seleccionada) {
-  const correcta = preguntaActual.correcta;
+function evaluarRespuesta(btn, esCorrecta) {
   const botones = divOpciones.querySelectorAll("button");
-  botones.forEach((b, i) => {
-    b.disabled = true;
-    if (i === correcta) b.classList.add("correcta");
-    if (i === seleccionada && i !== correcta) b.classList.add("incorrecta");
-  });
+  botones.forEach(b => b.disabled = true);
 
-  if (seleccionada === correcta) {
+  if (esCorrecta) {
     respuestasCorrectas++;
+    btn.classList.add("correcta");
     divFeedback.textContent = "¡Correcto!";
     divFeedback.style.color = "green";
   } else {
+    btn.classList.add("incorrecta");
     divFeedback.textContent = "Incorrecto.";
     divFeedback.style.color = "red";
+
+    // Resaltar la respuesta correcta
+    botones.forEach(b => {
+      if (b.textContent === preguntaActual.opciones[preguntaActual.correcta]) {
+        b.classList.add("correcta");
+      }
+    });
   }
 
   btnSiguiente.disabled = false;
