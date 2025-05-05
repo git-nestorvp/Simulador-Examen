@@ -10,14 +10,34 @@ const bancoPreguntas = [
     correcta: 1
   },
   {
-    pregunta: "Se un OSS ha accidentalmente rovesciato una brocca d'acqua nel corridoio dell'unità operativa, per ridurre il rischio di cadute, qual è il primo intervento che si dovrebbe attuare?",
-    opciones: [
-      "Andare a prendere degli asciugamani o qualcos'altro per asciugare",
+    "pregunta": "Se un Oss ha accidentalmente rovesciato una brocca d'acqua nel corridoio dell'unità operativa, per ridurre il rischio di cadute, qual è il primo intervento che si dovrebbe attuare?",
+    "opciones": [
       "Restare dov'è avvenuto l'incidente e mandare qualcun altro a chiamare il personale delle pulizie per fare asciugare",
+      "Andare a prendere degli asciugamani o qualcos'altro per asciugare",
       "Riempire di nuovo la brocca d'acqua e portarla al paziente, quindi tornare ad asciugare",
       "Chiamare il personale delle pulizie dalla postazione più vicina per asciugare"
     ],
-    correcta: 1
+    "correctaTexto": "Restare dov'è avvenuto l'incidente e mandare qualcun altro a chiamare il personale delle pulizie per fare asciugare"
+  },
+  {
+    "pregunta": "RIVELAZIONE DEL POLSO - Prima di procedere, è opportuno invitare la persona ad assumere la posizione supina e a posizionare l'avambraccio sul torace o lungo il fianco con il polso:",
+    "opciones": [
+      "esteso e il palmo verso il basso",
+      "e la mano nella posizione preferita dall'assistito",
+      "esteso e il palmo verso l'alto",
+      "flesso e la mano chiusa"
+    ],
+    "correctaTexto": "esteso e il palmo verso il basso"
+  },
+  {
+    "pregunta": "Qual è il primo parametro da rilevare, in caso di dispnea?",
+    "opciones": [
+      "La difficoltà respiratoria",
+      "L'utilizzo dei muscoli accessori",
+      "La difficoltà ad effettuare attività",
+      "Il colorito cutaneo e la presenza di cianosi o pallore"
+    ],
+    "correctaTexto": "La difficoltà respiratoria"
   }
   // Agrega más preguntas aquí...
 ];
