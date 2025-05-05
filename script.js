@@ -1,15 +1,5 @@
 const bancoPreguntas = [
   {
-    pregunta: "¿Cuál es la capital de Francia?",
-    opciones: ["Madrid", "París", "Roma", "Berlín"],
-    correcta: 1
-  },
-  {
-    pregunta: "¿Qué es HTML?",
-    opciones: ["Lenguaje de programación", "Lenguaje de marcado", "Framework", "Base de datos"],
-    correcta: 1
-  },
-  {
     "pregunta": "Se un Oss ha accidentalmente rovesciato una brocca d'acqua nel corridoio dell'unità operativa, per ridurre il rischio di cadute, qual è il primo intervento che si dovrebbe attuare?",
     "opciones": [
       "Restare dov'è avvenuto l'incidente e mandare qualcun altro a chiamare il personale delle pulizie per fare asciugare",
@@ -18,7 +8,67 @@ const bancoPreguntas = [
       "Chiamare il personale delle pulizie dalla postazione più vicina per asciugare"
     ],
     "correcta": 0
-  }  
+  },
+  {
+    pregunta: "RIVELAZIONE DEL POLSO - Prima di procedere, è opportuno invitare la persona ad assumere la posizione supina e a posizionare l'avambraccio sul torace o lungo il fianco con il polso:",
+    opciones: [
+      "esteso e il palmo verso il basso",
+      "e la mano nella posizione preferita dall'assistito",
+      "esteso e il palmo verso l'alto",
+      "flesso e la mano chiusa"
+    ],
+    correcta: 0
+  },
+    {
+      pregunta: "Qual è il primo parametro da rilevare, in caso di dispnea?",
+      opciones: [
+        "La difficoltà respiratoria",
+        "L'utilizzo dei muscoli accessori",
+        "La difficoltà ad effettuare attività",
+        "Il colorito cutaneo e la presenza di cianosi o pallore"
+      ],
+      correcta: 0
+    },
+    {
+      pregunta: "I compiti forniti dall'infermiere devono essere eseguiti sempre e comunque dall'OSS?",
+      opciones: [
+        "Solo se rientrano nelle mansioni previste dal profilo OSS",
+        "Solo se espressi in maniera scritta nel registro delle consegne",
+        "Sì, sempre e comunque",
+        "Sì, se espressi in maniera chiara"
+      ],
+      correcta: 0
+    },
+    {
+      pregunta: "Nell'aiuto al paziente durante la vestizione, che cosa deve fare l'OSS?",
+      opciones: [
+        "L'OSS deve rispettare i tempi della persona",
+        "L'OSS deve assistere altri pazienti, disinteressandosi",
+        "L'OSS deve essere veloce per evitare colpi di freddo",
+        "L'OSS deve agire sempre molto lentamente"
+      ],
+      correcta: 0
+    },
+    {
+      pregunta: "L'assunzione di alimenti, per un paziente portatore di sondino naso-gastrico può avvenire:",
+      opciones: [
+        "sia con il sondino, sia per os",
+        "solo tramite sondino",
+        "solo per os",
+        "solo con semi-solidi"
+      ],
+      correcta: 0
+    },
+    {
+      pregunta: "Cos'è necessario per evitare che l'anziano posizionato su un seggiolone polifunzionale scivoli in avanti con il sedere?",
+      opciones: [
+        "L'Oss bascula la carrozzina evitando di inclinare lo schienale oltre i novanta gradi",
+        "L'Oss posiziona una cintura addominale",
+        "L'Oss bascula la carrozzina e inclina lo schienale più che può",
+        "L'Oss inclina lo schienale della carrozzina"
+      ],
+      correcta: 0
+    }
   // Agrega más preguntas aquí...
 ];
 
